@@ -551,6 +551,8 @@
   \setlength{\cftbeforechapskip}{3.5pt}
   \setlength{\cftbeforesecskip}{3pt}
   \setlength{\cftbeforesubsecskip}{3pt}
+  % 设置章节后两个半角空格（共4个汉字字符距离）
+  \setlength{\cftchapnumwidth}{56pt}
 
   \pdfbookmark{目录}{toc}
   \tableofcontents
