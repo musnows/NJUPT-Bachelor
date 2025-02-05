@@ -608,26 +608,37 @@
 }
 
 % 附录
+% 定义一个计数器用于附录编号（实现自动ABC编号）
+\newcounter{appendixcounter}
+\setcounter{appendixcounter}{0}
+
+% 定义附录环境
 \newcommand{\thesisappendix}{
-	\titleformat{\chapter}[block]
-	{\fontsize{16pt}{16pt}\selectfont\heiti\thispagestyle{fancy}}
-	{\thechapter}{30pt}{}
-	\titlespacing{\chapter}{0pt}{0pt}{0pt}
-	
-    \chapter*{\raggedleft\fontsize{16pt}{16pt}\selectfont{附录A}}
-  	
-  	\titleformat{\chapter}[block]
-  	{\centering\fontsize{15pt}{15pt}\selectfont\heiti\thispagestyle{fancy}}
-  	{\thechapter}{30pt}{}
-  	\titlespacing{\chapter}{0pt}{0pt}{15pt}
-  	
+    % 增加附录计数器
+    \stepcounter{appendixcounter}
+    % 重置章节编号
+    \setcounter{chapter}{0}
     \setcounter{section}{0}
-    \addcontentsline{toc}{chapter}{附录}
-    \markboth{附录}{附录}
+    \setcounter{equation}{0}
+    \setcounter{table}{0}
+    \setcounter{figure}{0}
+    % 重置章节编号格式
+    \renewcommand{\thechapter}{\Alph{appendixcounter}}
+    \renewcommand{\thesection}{\thechapter-\arabic{section}}
+    \renewcommand{\theequation}{\thechapter-\arabic{equation}}
+    \renewcommand{\thetable}{\thechapter-\arabic{table}}
+    \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+    % 添加到目录
+    \addcontentsline{toc}{chapter}{附录\thechapter}
+    % 设置章节标题格式
+    \titleformat{\chapter}[block]
+    {\fontsize{16pt}{16pt}\selectfont\heiti\thispagestyle{fancy}}
+    {\thechapter}{30pt}{}
+    \titlespacing{\chapter}{0pt}{0pt}{0pt}
+    % 添加附录标题
+    \chapter*{\raggedleft\fontsize{16pt}{16pt}\selectfont{附录\thechapter}}
     \thispagestyle{fancy}
-    \renewcommand{\theequation}{a-\arabic{equation}}
-    \renewcommand{\thetable}{a-\arabic{table}}
-    \renewcommand{\thefigure}{a-\arabic{figure}}
+    \markboth{附录\thechapter}{附录\thechapter}
 }
 
 % 定理推导等等翻译
