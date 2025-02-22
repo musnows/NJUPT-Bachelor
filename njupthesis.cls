@@ -341,6 +341,8 @@
     \chapter*{\fontsize{16pt}{16pt}\selectfont{摘\chinesespace\chinesespace 要}}
     \thispagestyle{empty}
     \vspace{1cm}
+}{
+  \clearpage
 }
 
 % 中文关键字
@@ -360,6 +362,8 @@
   \pdfbookmark{英文摘要}{englishabstract}
   \chapter*{\fontsize{16pt}{16pt}\selectfont{\bfseries ABSTRACT}}
     \thispagestyle{empty}
+}{
+  \clearpage
 }
 
 % 英文关键字
