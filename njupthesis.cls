@@ -627,11 +627,12 @@
     \setcounter{table}{0}
     \setcounter{figure}{0}
     % 重置章节编号格式
+    \renewcommand{\theHchapter}{Appendix\Alph{appendixcounter}.\arabic{chapter}} % 超链接锚点唯一标识
     \renewcommand{\thechapter}{\Alph{appendixcounter}}
-    \renewcommand{\thesection}{\thechapter-\arabic{section}}
-    \renewcommand{\theequation}{\thechapter-\arabic{equation}}
-    \renewcommand{\thetable}{\thechapter-\arabic{table}}
-    \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+    \renewcommand{\thesection}{\thechapter.\arabic{section}}
+    \renewcommand{\theequation}{\thechapter.\arabic{equation}}
+    \renewcommand{\thetable}{\thechapter.\arabic{table}}
+    \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
     % 设置章节标题格式
     \titleformat{\chapter}[block]
     {\fontsize{16pt}{16pt}\selectfont\heiti\thispagestyle{fancy}}
@@ -641,8 +642,9 @@
     \chapter*{\raggedleft\fontsize{16pt}{16pt}\selectfont{附录\thechapter}}
     \thispagestyle{fancy}
     \markboth{附录\thechapter}{附录\thechapter}
-    % 添加到目录
-    \addcontentsline{toc}{chapter}{附录\thechapter}
+    % 添加到PDF目录
+    \phantomsection % 手动设置PDF大纲
+    \addcontentsline{toc}{chapter}{附录\thechapter} % 手动添加附录X的PDF大纲
     % 附录和附录正文添加空行
     \vspace{0.5cm}
 }
