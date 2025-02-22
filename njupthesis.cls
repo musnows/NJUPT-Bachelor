@@ -632,8 +632,6 @@
     \renewcommand{\theequation}{\thechapter-\arabic{equation}}
     \renewcommand{\thetable}{\thechapter-\arabic{table}}
     \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
-    % 添加到目录
-    \addcontentsline{toc}{chapter}{附录\thechapter}
     % 设置章节标题格式
     \titleformat{\chapter}[block]
     {\fontsize{16pt}{16pt}\selectfont\heiti\thispagestyle{fancy}}
@@ -643,6 +641,10 @@
     \chapter*{\raggedleft\fontsize{16pt}{16pt}\selectfont{附录\thechapter}}
     \thispagestyle{fancy}
     \markboth{附录\thechapter}{附录\thechapter}
+    % 添加到目录
+    \addcontentsline{toc}{chapter}{附录\thechapter}
+    % 附录和附录正文添加空行
+    \vspace{0.5cm}
 }
 
 % 定理推导等等翻译
