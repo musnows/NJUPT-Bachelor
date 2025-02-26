@@ -1,3 +1,5 @@
+本项目于2025年2月fork自[dhiyu/NJUPT-Bachelor](https://github.com/dhiyu/NJUPT-Bachelor)。由于源仓库作者似乎已不再维护，本仓库合并了源仓库的问题PR，并针对我使用过程中遇到的一些问题进行了小部分修改，希望能帮到后来者。
+
 # 南京邮电大学本科毕业设计Latex模板
 
 ## 小故事
@@ -41,8 +43,8 @@
 
 1. 感觉毕竟是毕业论文，用overleaf显得有些草率，还是建议在本地编辑和编译。
 2. 对于 `Windows` 系统，直接安装 `TeX Live` ，编辑器推荐使用`TeXstudio`。
-3. `MacOS`经过[`Leo Y Chen`](https://github.com/xsro)的测试基本无问题，后续欢迎大家测试反馈。
-4. [`Leo Y Chen`](https://github.com/xsro)提供了`vscode`的latex编译配置文件，存放在`.vscode/`文件夹中，由于本人暂不使用`vscode`，大家自行测试。
+3. `MacOS` 经过 [`Leo Y Chen`](https://github.com/xsro) 的测试基本无问题，通过 `brew install mactex` 安装mactex环境即可（需要先安装brew）。
+4. [`Leo Y Chen`](https://github.com/xsro)提供了`vscode`的latex编译配置文件，存放在`.vscode/`文件夹中。vscode 需要安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件。安装完毕此插件后，修改`main.tex`并保存，就会自动触发编译流程，更新`main.pdf`。
 
 ## 编译过程
 
@@ -55,16 +57,17 @@
 
 - `main.tex`: 这是tex源文件，我在里面填充了示例，可以对照生成的 `main.pdf` 熟悉代码。
 - `reference.bib`: 论文的参考文献库。
-- `./pic`: 将图片放入该文件夹，图片支持常规的格式如`eps`, `jpg`, `png` , `pdf`, `pdf`文件可以编译得更快。
+- `./pic`: 将图片放入该文件夹，图片支持常规的格式如`eps`, `jpg`, `png` , `pdf`, `pdf`文件可以编译得更快。在`main.tex`中只需要`{文件名}`就可以展示图片（不需要图片文件后缀），具体可以参考`main.tex`中已有的图片引用代码。
 
 ## 字数统计 摘自：[`NJUPThesis-Bachelor`](https://github.com/imguozr/NJUPThesis-Bachelor)
 
 1. 在命令行中使用 `texcount your-tex-file-name.tex` 命令进行统计。
 2. 对生成的 PDF 文件进行统计。
+3. 在vscode中[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)插件的`侧边栏-杂项-统计LaTeX文档中的词数`，点击后会在右下角弹窗显示当前文档的词数。
 
 ## 已知问题
 
-1. ~~目前来看唯一的缺陷可能是当时编写时比较急促，自身水平又比较差，在一些标题和题注的格式上，为了和官方Word模板几乎相同，我在里面加了一些空格或是间隔，本身是不推荐大家这样修改模板的，会造成在正文文段中引用时也出现空格和间隔。~~目前此问题已由[`Leo Y Chen`](https://github.com/xsro)解决。暂时无问题，欢迎大家反馈。
+1. ~~目前来看唯一的缺陷可能是当时编写时比较急促，自身水平又比较差，在一些标题和题注的格式上，为了和官方Word模板几乎相同，我在里面加了一些空格或是间隔，本身是不推荐大家这样修改模板的，会造成在正文文段中引用时也出现空格和间隔~~。目前此问题已由[`Leo Y Chen`](https://github.com/xsro)解决。暂时无问题，欢迎大家反馈。
 2. everypage的功能已经被官方支持所以不再需要这个包，所以这个包会警告。参见[ref](https://stackoverflow.com/questions/64921954/how-to-solve-latex-package-warning-for-everypage)
 
 ## Q&A
@@ -76,8 +79,9 @@
 如果觉得好用，你可以在致谢部分留下**本论文采用基于 LaTeX 的南京邮电大学本科论文模版编写**，欢迎附上本GitHub repo的链接。
 
 ## 贡献者名单
-- [`dhiyu`](https://github.com/dhiyu)(Owner)
-- [`Leo Y Chen`](https://github.com/xsro)(Contributer)
+- [`dhiyu`](https://github.com/dhiyu) (Owner)
+- [`Leo Y Chen`](https://github.com/xsro) (Contributer)
+- [`musnows`](https://github.com/musnows/) (Contributer)
 
 ## 参考项目
 - [`imguozr`](https://github.com/imguozr)的[`NJUPThesis-Bachelor`](https://github.com/imguozr/NJUPThesis-Bachelor)
