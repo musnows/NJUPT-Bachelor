@@ -545,14 +545,22 @@
 }
 
 % 目录页设置
-% TODO 修改目录
 \newcommand{\thesistableofcontents}{
-%	\titlecontents{chapter}[4em]{\bfseries \zihao{5} \vspace{10pt}}{\contentslabel{4em}}{\hspace*{-4em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
-%	\titlecontents{section}[4em]{\bfseries \zihao{5} \vspace{10pt}}{\contentslabel{4em}}{\hspace*{-4em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
-%	\titlecontents{subsection}[4em]{\zihao{5}}{\contentslabel{2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
-	\pdfbookmark{目录}{toc}
-	\tableofcontents
-	\thispagestyle{empty}
+  \setlength{\cftchapindent}{0pt} % 设置章标题的缩进
+  \setlength{\cftsecindent}{12pt}  % 设置节标题的缩进为1个汉字字符
+  \setlength{\cftsubsecindent}{24pt} % 设置小节标题的缩进2个汉字字符
+
+
+  % 设置目录项目之间的距离为1.25倍行距
+  \setlength{\cftbeforechapskip}{3.5pt}
+  \setlength{\cftbeforesecskip}{3pt}
+  \setlength{\cftbeforesubsecskip}{3pt}
+  % 设置章节后两个半角空格（共4个汉字字符距离）
+  \setlength{\cftchapnumwidth}{56pt}
+
+  \pdfbookmark{目录}{toc}
+  \tableofcontents
+  \thispagestyle{empty}
 }
 
 % 章节名重构
