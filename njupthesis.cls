@@ -337,7 +337,7 @@
 
 % 中文摘要
 \newenvironment{chineseabstract}{
-    \pdfbookmark{中文摘要}{chineseabstract}
+    \pdfbookmark{摘要}{chineseabstract}
     \chapter*{\fontsize{16pt}{16pt}\selectfont{摘\chinesespace\chinesespace 要}}
     \thispagestyle{empty}
     \vspace{1cm}
@@ -359,9 +359,10 @@
 
 % 英文摘要
 \newenvironment{englishabstract}{
-  \pdfbookmark{英文摘要}{englishabstract}
-  \chapter*{\fontsize{16pt}{16pt}\selectfont{\bfseries ABSTRACT}}
+    \pdfbookmark{ABSTRACT}{englishabstract}
+    \chapter*{\fontsize{16pt}{16pt}\selectfont{\bfseries ABSTRACT}}
     \thispagestyle{empty}
+    \vspace{1cm}
 }{
   \clearpage
 }
@@ -652,7 +653,7 @@
     \markboth{附录\thechapter}{附录\thechapter}
     % 添加到PDF目录
     \phantomsection % 手动设置PDF大纲
-    \addcontentsline{toc}{chapter}{附录\thechapter} % 手动添加附录X的PDF大纲
+    \addcontentsline{toc}{chapter}{附录\large{\thechapter}} % 手动添加附录X的PDF大纲
     % 附录和附录正文添加空行
     \vspace{0.5cm}
 }
