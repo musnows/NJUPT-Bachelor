@@ -656,6 +656,9 @@
     \addcontentsline{toc}{chapter}{附录\large{\thechapter}} % 手动添加附录X的PDF大纲
     % 附录和附录正文添加空行
     \vspace{0.5cm}
+    % 附录正文格式设置
+    \fontsize{12pt}{15pt}           % 小四号字体
+    \setstretch{1.25}               % 1.25倍行距
 }
 
 % 定理推导等等翻译
@@ -704,7 +707,31 @@
   \setlength{\belowdisplayskip}{8pt}
 }
 
+% 导入代码块
+\usepackage{listings}
+\usepackage{xcolor}
 
+% 自定义代码块样式
+\lstset{
+    numbers=left, % 显示行号
+    numberstyle=\small, % 行号字体
+    basicstyle=\small\ttfamily, % 等宽字体
+    keywordstyle=\color{blue!70}, % 关键字颜色
+    commentstyle=\color{red!50!green!50!blue!50}, % 注释颜色
+    frame=single, % 添加普通边框
+    rulesepcolor=\color{black}, % 边框颜色
+    backgroundcolor =\color{yellow!10},    % 背景色：淡黄
+    escapeinside=``, % 允许在代码块中使用 LaTeX 命令
+    xleftmargin=1.5em, xrightmargin=0.5em, aboveskip=1em, % 设置代码块的边距
+    framexleftmargin=0em, % 阴影框左边距
+    breaklines=true, % 启用自动换行
+    breakatwhitespace=true % 在空白处换行
+}
+\renewcommand{\lstlistingname}{Code} % 将标题从 Listing 改为 Code
+
+% 在itemize和enumerate前后插入空行
+\setlist[itemize]{after=\vspace{0.15cm},before=\vspace{0.15cm}}
+\setlist[enumerate]{after=\vspace{0.15cm},before=\vspace{0.15cm}}
 
 
 \endinput
