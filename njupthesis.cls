@@ -722,7 +722,7 @@
     rulesepcolor=\color{black}, % 边框颜色
     backgroundcolor =\color{yellow!10},    % 背景色：淡黄
     escapeinside=``, % 允许在代码块中使用 LaTeX 命令
-    xleftmargin=1.5em, xrightmargin=0.5em, aboveskip=1em, % 设置代码块的边距
+    xleftmargin=1.5em, xrightmargin=0.5em, aboveskip=0em, % 设置代码块的边距
     framexleftmargin=0em, % 阴影框左边距
     breaklines=true, % 启用自动换行
     breakatwhitespace=true % 在空白处换行
