@@ -642,6 +642,10 @@
     \renewcommand{\theequation}{\thechapter.\arabic{equation}}
     \renewcommand{\thetable}{\thechapter.\arabic{table}}
     \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+    % 重置 listings 计数器
+    \setcounter{lstlisting}{0}
+    % 设置 listings 编号格式为 附录号.代码块编号
+    \renewcommand{\thelstlisting}{\thechapter.\arabic{lstlisting}}
     % 设置章节标题格式
     \titleformat{\chapter}[block]
     {\fontsize{16pt}{16pt}\selectfont\heiti\thispagestyle{fancy}}
