@@ -371,7 +371,7 @@
 \newcommand{\englishkeyword}[1]{
   \vspace{\baselineskip}
   \noindent\begin{minipage}[t]{2.1cm}
-      \noindent\textbf{Keywords:}
+      \noindent\textbf{Key words:}
     \end{minipage}
     \begin{minipage}[t]{
       0.8\linewidth - 2.1cm}
