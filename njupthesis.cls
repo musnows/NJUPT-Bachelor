@@ -174,7 +174,7 @@
 \renewcommand{\headrulewidth}{1.0pt}
 
 % 行距倍数 *****要求为1.25倍行距*****
-\linespread{1.25}
+\linespread{1.35} % 需要设置成1.35才和docx上的1.25倍行距对应（macos上测试，windows未测试）
 
 % 设置段落首行缩进
 % 12pt 是小四号，所以这里24pt=12*2正好是两个中文字符
@@ -483,7 +483,7 @@
 \begin{center}
   \fontsize{15pt}{15pt}\selectfont{\heiti ~\\}
   \fontsize{36pt}{36pt}\selectfont{\heiti ~\\南京邮电大学 \\ 毕{\ }业{\ }设{\ }计（论{\ }文）\\}
-  \vspace{2cm}
+  \vspace{1cm} % 缩小此处长度（2025新模板）
   
   \begin{tabular}{>{\fontsize{16pt}{16pt}\kaiti}l
       >{\centering\arraybackslash\fontsize{15pt}{15pt}}
@@ -502,7 +502,7 @@
     \cline{2-2}
   \end{tabular}
   
-\vspace{5cm}
+\vspace{4.5cm} % 缩小此处长度（2025新模板）
 
 \fontsize{16pt}{16pt}\selectfont{\kaiti 日期：\quad \thebegindate 至\hspace{.5pc} \thefinishdate \\}
 \end{center}
