@@ -190,7 +190,7 @@
 
 % 图、表标题格式设置
 \captionsetup{format=hang}
-\DeclareCaptionLabelSeparator{custom}{\chinesespace\chinesespace}
+\DeclareCaptionLabelSeparator{custom}{\chinesespace} % 2025模板修改，图序号和图描述之间只有一个全角空格
 \captionsetup{width=\textwidth - 42pt,labelsep=custom}
 % 图注下方空行
 \captionsetup[figure]{aboveskip=0pt,belowskip=6pt}
