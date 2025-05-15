@@ -586,7 +586,7 @@
 	\titleformat{\chapter}[block]
 	{\fontsize{16pt}{16pt}\selectfont\heiti\thispagestyle{fancy}}
 	{\thechapter}{30pt}{}
-	\titlespacing{\chapter}{0pt}{0pt}{0pt}
+	\titlespacing{\chapter}{0pt}{0pt}{10pt} % 最后一个设置“参考文献”和参考文献列表之间的空隙
 	
 	\fontsize{10.5pt}{10.5pt}\selectfont{
 		\bibliographystyle{gbt7714-numerical}
