@@ -15,6 +15,7 @@
 \hyphenpenalty=5000
 \tolerance=1000
 
+\RequirePackage{tabularx} % 表格与页面等宽需要
 \RequirePackage{array}
 \RequirePackage{setspace}
 \RequirePackage{multirow}
@@ -217,7 +218,12 @@
 }
 \makeatother
 
+% 表格中的字体小一号（五号）
 \AtBeginEnvironment{tabular}{\small}
+\AtBeginEnvironment{tabularx}{\small}
+
+% 新增一个居中的可伸缩列，命名为Y，表格与页面等宽需要使用这个Y列
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 % 子图图注设置
 \makeatletter
