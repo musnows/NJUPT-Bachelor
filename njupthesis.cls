@@ -485,6 +485,8 @@
   \fontsize{36pt}{36pt}\selectfont{\heiti ~\\南京邮电大学 \\ 毕{\ }业{\ }设{\ }计（论{\ }文）\\}
   \vspace{1cm} % 缩小此处长度（2025新模板）
   
+  \begingroup % 使用group括起来，单独设置行距
+  \linespread{1.25} % 封面信息部分依旧保持1.25 latex行距，否则和模板对不上
   \begin{tabular}{>{\fontsize{16pt}{16pt}\kaiti}l
       >{\centering\arraybackslash\fontsize{15pt}{15pt}}
       p{11.53cm}}
@@ -501,7 +503,8 @@
     指导单位{}{} & \theschool \\
     \cline{2-2}
   \end{tabular}
-  
+  \endgroup
+
 \vspace{4.5cm} % 缩小此处长度（2025新模板）
 
 \fontsize{16pt}{16pt}\selectfont{\kaiti 日期：\quad \thebegindate 至\hspace{.5pc} \thefinishdate \\}
