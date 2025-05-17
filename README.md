@@ -35,9 +35,7 @@ fork后的修改点（按提交顺序）：
 
 ### 运行环境
 
-若你对LaTex不熟悉，可以直接使用[overleaf](https://cn.overleaf.com/)或[TexPage](https://www.texpage.com/)（推荐后者）在线编辑。好处是方便，
-
-在TexPage网站上注册登录，新建项目时选择“上传项目”，下载本仓库zip上传，上传之后即可在线编辑，如下图所示。
+若你对LaTex不熟悉，可以直接使用[overleaf](https://cn.overleaf.com/)或[TexPage](https://www.texpage.com/)（推荐后者）在线编辑。好处是方便，在TexPage网站上注册登录，新建项目时选择“上传项目”，下载本仓库zip上传，上传之后即可在线编辑，如下图所示。
 
 ![texpage截图](./pic/texpage截图.png)
 
