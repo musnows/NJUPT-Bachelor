@@ -195,13 +195,14 @@
 \captionsetup{width=\textwidth - 42pt,labelsep=custom}
 % 图注下方空行
 \captionsetup[figure]{aboveskip=0pt,belowskip=6pt}
-\captionsetup[table]{aboveskip=0pt,belowskip=0pt}
-
+\captionsetup[table]{aboveskip=0pt,belowskip=0pt} % 表头是在表格上方的，所以不需要额外空隙
+% 设置表格下方的空隙（与下方空一行）
+\AtEndEnvironment{table}{\vspace{6pt}}
 
 \setlength{\extrarowheight}{5pt}
 \setlength{\subfigcapskip}{0pt}
 
-% 文中浮动顶端与底端所留的距离
+% 文中浮动顶端与底端所留的距离（默认间距，图表公式都会采用这个间距）
 \setlength{\intextsep}{4pt}
 
 % 图标题居中设置
