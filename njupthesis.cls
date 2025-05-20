@@ -435,6 +435,7 @@
 \newcommand{\thegraduateyear}{}
 \newcommand{\thebegindate}{}
 \newcommand{\thefinishdate}{}
+\newcommand{\thecreatedate}{}
 
 \renewcommand{\title}[1]{
   \renewcommand{\thetitle}{#1}
@@ -474,6 +475,13 @@
 
 \newcommand{\finishdate}[1]{
   \renewcommand{\thefinishdate}{#1}
+}
+
+% 原创性声明日期
+\newcommand{\createdate}[3]{
+  \renewcommand{\thecreatedate}{
+    \quad#1\quad 年 \quad#2\quad 月\quad#3\quad 日
+  }
 }
 
 
@@ -536,7 +544,7 @@
 
 \hspace*{7cm} 论文作者签名：
 
-\hspace*{7cm} 日期：\quad\quad 年\quad\quad 月\quad\quad 日
+\hspace*{7cm} 日期：\thecreatedate
 \end{spacing}
 
 
