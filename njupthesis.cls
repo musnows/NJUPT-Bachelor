@@ -458,7 +458,11 @@
 }
 
 \newcommand{\studentclass}[1]{
-  \renewcommand{\thestudentclass}{#1}
+  \renewcommand{\thestudentclass}{
+    \ifstrempty{#1}
+      {}% 如果为空，什么都不加
+      {#1\quad}% 如果不为空，班级号加上\quad
+  }
 }
 
 \newcommand{\studentid}[1]{
@@ -511,7 +515,7 @@
     \cline{2-2}
     学生姓名{}{} & \theauthor   \\
     \cline{2-2}
-    班级学号{}{} & {\large \thestudentclass \quad \thestudentid} \\
+    班级学号{}{} & {\large \thestudentclass\thestudentid} \\
     \cline{2-2}
     指导老师{}{} & \theadvisor \\
     \cline{2-2}
