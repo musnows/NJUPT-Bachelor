@@ -582,6 +582,7 @@
   \setlength{\cftchapnumwidth}{56pt}
 
   \pdfbookmark{目录}{toc}
+  \addtocontents{toc}{\protect\vspace{0.6cm}} % 目录两个字下方的空行
   \tableofcontents
   \thispagestyle{empty}
 }
