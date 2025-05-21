@@ -18,9 +18,12 @@ fork后的修改点（按提交顺序）：
 
 ### 介绍
 
-本模板是《南京邮电大学本科生(理工艺教类)毕业设计》的LaTex模板，该模板由[NJUPThesis-Bachelor](https://github.com/imguozr/NJUPThesis-Bachelor) 以及[lemoxiao](https://github.com/lemoxiao)修改过的[NJUPThesis-Bachelor](https://github.com/lemoxiao/NJUPThesis-Scholar)演化而来，并做了大量的修改工作和完善工作。
+本模板是《南京邮电大学本科生(理工艺教类)毕业设计》的LaTex模板，该模板由[NJUPThesis-Bachelor](https://github.com/imguozr/NJUPThesis-Bachelor)以及[lemoxiao](https://github.com/lemoxiao)修改过的[NJUPThesis-Bachelor](https://github.com/lemoxiao/NJUPThesis-Scholar)演化而来，并做了大量的修改工作和完善工作。
 
 慕雪在原作者[dhiyu](https://github.com/dhiyu/NJUPT-Bachelor)的基础上针对2025年本科毕设论文模板的要求做了对应的修正。
+
+* 2021年doc模板文件：[2021 word template](./2021-word-template.rar)
+* 2025年doc模板文件：[2025 word template](./2025-word-template.zip)
 
 ### 核心特征
 
