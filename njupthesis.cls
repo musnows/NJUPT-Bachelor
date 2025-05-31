@@ -436,6 +436,8 @@
 \newcommand{\thebegindate}{}
 \newcommand{\thefinishdate}{}
 \newcommand{\thecreatedate}{}
+\newcommand{\theauthorsign}{}
+\newcommand{\theadvisorsign}{}
 
 \renewcommand{\title}[1]{
   \renewcommand{\thetitle}{#1}
@@ -488,6 +490,28 @@
   }
 }
 
+% 原创性声明作者签名图片
+\newcommand{\authorsign}[1]{
+  \renewcommand{\theauthorsign}{
+    \ifstrempty{#1}{ % 检查 #1 是否为空
+      % 如果为空，不添加任何内容
+    }{
+      \raisebox{-0.5cm}{\includegraphics[height=1.5cm]{#1}} % 不为空，添加作者签名图片
+    }
+  }
+}
+
+% 封面导师签名图片
+\newcommand{\advisorsign}[1]{
+  \renewcommand{\theadvisorsign}{
+    \ifstrempty{#1}{ % 检查 #1 是否为空
+      \theadvisor % 如果为空，直接使用导师名称文字
+    }{
+      \includegraphics[height=1.2cm]{#1} % 不为空，添加导师签名图片
+    }
+  }
+}
+
 
 \DeclareOption{bachelor}{
   \renewcommand{\chinesedegreename}{本科}
@@ -513,7 +537,7 @@
     \cline{2-2}
     专\chinesespace\chinesespace 业{}{} & \themajor \\
     \cline{2-2}
-    学生姓名{}{} & \theauthor   \\
+    学生姓名{}{} & \theadvisorsign  \\
     \cline{2-2}
     班级学号{}{} & {\large \thestudentclass\thestudentid} \\
     \cline{2-2}
@@ -546,7 +570,7 @@
 对本研究做出过重要贡献的个人和集体，均已在文中以明确方式标明并表示了谢意。
 \vspace{3cm}
 
-\hspace*{7cm} 论文作者签名：
+\hspace*{7cm} 论文作者签名：\theauthorsign % 插入签名图片
 
 \hspace*{7cm} 日期：\thecreatedate
 \end{spacing}
