@@ -652,7 +652,7 @@
   \renewcommand\thesection{\arabic{section}}
   \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
   \setcounter{section}{0}
-  \chapter*{\fontsize{16pt}{16pt}\selectfont{致\chinesespace 谢}}
+  \chapter*{\fontsize{16pt}{16pt}\selectfont{致\chinesespace\chinesespace 谢}}
   \addcontentsline{toc}{chapter}{致谢}
   \markboth{致谢}{致谢}
   \thispagestyle{fancy}
